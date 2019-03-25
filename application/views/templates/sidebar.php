@@ -17,6 +17,13 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
+
+        <li class=>
+          <a href="<?= base_url('dashboard');?>">
+            <button type="button" class="btn btn-success">Open Ticket</button>
+          </a>
+        </li>
+
         <li class="<?php if($this->uri->segment(1)=="dashboard"||$this->uri->segment(1)==""){echo "active";}?>">
           <a href="<?= base_url('dashboard');?>">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
@@ -43,7 +50,7 @@
         </li>
         <li class="<?php if($this->uri->segment(2)=="search"){echo "active";}?>">
           <a href="<?= base_url('search/');?>">
-            <i class="fa fa-user-times"></i> <span>Cari Data</span>
+            <i class="fa fa-search"></i> <span>Cari Data</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
