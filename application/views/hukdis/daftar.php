@@ -25,7 +25,7 @@
                 
                   <?php foreach ($hukdis as $key => $hd):?>
                     <tr>
-                      <td><a href="<?= base_url('profile/detail_profile_hukdis/'.$hd['no_ticket']);?>"><?= $hd['name'];?></a></td>
+                      <td><a href="<?= base_url('profile/detail_profile_hukdis/'.$hd['no_ticket']);?>"><?= $hd['nama'];?></a></td>
                       <td><?= $hd['nip'];?></td>
                       <td><?= $hd['nama_wilayah'];?></td>
                       <td><?= $hd['satker_id'];?></td>

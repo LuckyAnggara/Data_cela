@@ -9,7 +9,7 @@
           <img src="<?=base_url('assets/image/profile/'.$dbase['image']);?>" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p><?= $dbase['name']; ?></p>
+          <p><?= $dbase['nama']; ?></p>
           <a>Level ID <?= $dbase['level_id']; ?></a>
           <!-- <a href="#"><i class="fa fa-circle text-success"></i> Online</a> -->
         </div>
@@ -18,8 +18,8 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
 
-        <li class=>
-          <a href="<?= base_url('dashboard');?>">
+        <li>
+          <a href="<?= base_url('ticket');?>">
             <button type="button" class="btn btn-success">Open Ticket</button>
           </a>
         </li>

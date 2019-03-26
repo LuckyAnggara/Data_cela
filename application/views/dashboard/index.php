@@ -4,7 +4,7 @@
     <!-- Main content -->
     <section class="content-header">
       <h1 class="text-center">
-        Selamat Datang <?= $dbase['name'];?>
+        Selamat Datang <?= $dbase['nama'];?>
       </h1>
 
     </section>

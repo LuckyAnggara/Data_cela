@@ -24,6 +24,11 @@
   <!-- Date Picker -->
   <link rel="stylesheet" href="<?=base_url('assets/');?>bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
   <!-- Daterange picker -->
+  <!-- Select2 -->
+  <link rel="stylesheet" href="<?=base_url('assets/');?>bower_components/select2/dist/css/select2.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="<?=base_url('assets/');?>dist/css/AdminLTE.min.css">
+
   <link rel="stylesheet" href="<?=base_url('assets/');?>bower_components/bootstrap-daterangepicker/daterangepicker.css">
   <!-- DataTables -->
   <link rel="stylesheet" href="http://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">

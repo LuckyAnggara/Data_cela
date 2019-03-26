@@ -15,7 +15,7 @@
           <div class="box box-primary">
             <div class="box-body box-profile">
               <img class="profile-user-img img-responsive img-circle" src="<?=base_url('assets/image/profile/'.$hukdis['image']);?>">
-              <h3 class="profile-username text-center"><?= $hukdis['name'];?></h3>
+              <h3 class="profile-username text-center"><?= $hukdis['nama'];?></h3>
               <p class="text-muted text-center"><?= $hukdis['nip'];?></p>
             </div>
             <!-- /.box-body -->
@@ -30,7 +30,7 @@
             <div class="box-body">
               <strong><i class="fa fa-get-pocket margin-r-5"></i> Jabatan / Golongan</strong>
               <p class="text-muted">
-                 <?= $hukdis['golongan'];?>   || <?= $hukdis['last_position'];?>
+                 <?= $hukdis['golongan'];?>   || <?= $hukdis['jabatan_terakhir'];?>
               </p>
               <hr>
               <strong><i class="fa fa-map-marker margin-r-5"></i> Location</strong>
@@ -76,7 +76,7 @@
                     <i class="<?=$value['icon'];?>"></i>
                     <div class="timeline-item">
                       <!-- <span class="time"><i class="fa fa-clock-o"></i> 5 mins ago</span> -->
-                      <h3 class="timeline-header no-border"><a href="#"><?=$value['name'];?></a> <?=$value['header']. ' ' . $hukdis['name']. ' dengan Nomor Ticket ';?><a href="#"><?=$hukdis['no_ticket'];?></a> 
+                      <h3 class="timeline-header no-border"><a href="#"><?=$value['nama'];?></a> <?=$value['header']. ' ' . $hukdis['nama']. ' dengan Nomor Ticket ';?><a href="#"><?=$hukdis['no_ticket'];?></a> 
                       </h3>
                     </div>
                   </li>
@@ -93,7 +93,7 @@
                     <div class="timeline-item">
                      <!--  <span class="time"><i class="fa fa-clock-o"></i> 12:05</span> -->
 
-                      <h3 class="timeline-header"><a href="#"><?=$value['name'];?></a> <?=$value['header'];?> </h3>
+                      <h3 class="timeline-header"><a href="#"><?=$value['nama'];?></a> <?=$value['header'];?> </h3>
 
                       <div class="timeline-body">
                         <?=$value['keterangan'];?>

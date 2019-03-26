@@ -218,14 +218,14 @@
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
              <img src="<?=base_url('assets/image/profile/'.$dbase['image']);?>" class="user-image" alt="User Image">
-              <span class="hidden-xs"><?= $dbase['name'];?></span>
+              <span class="hidden-xs"><?= $dbase['nama'];?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
                 <img src="<?=base_url('assets/image/profile/'.$dbase['image']);?>" class="img-circle" alt="User Image">
                 <p>
-                  <?= $dbase['name'];?>
+                  <?= $dbase['nama'];?>
                   <small>Bekerja sejak 2019</small>
                 </p>
               </li>
