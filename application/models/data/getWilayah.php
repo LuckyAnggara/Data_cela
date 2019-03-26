@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		$this->db->select('*');
 		$this->db->limit('5');
 		$this->db->from('satker');
-		$this->db->like('wilayah_id',$input);
+		$this->db->where('wilayah_id',$input);
 		return $this->db->get()->result_array();
 		}
 
