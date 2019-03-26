@@ -37,6 +37,10 @@
 <script src="<?=base_url('assets/');?>bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
 <!-- datepicker -->
 <script src="<?=base_url('assets/');?>bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<!-- InputMask -->
+<script src="<?=base_url('assets/');?>plugins/input-mask/jquery.inputmask.js"></script>
+<script src="<?=base_url('assets/');?>plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="<?=base_url('assets/');?>plugins/input-mask/jquery.inputmask.extensions.js"></script>
 <!-- Bootstrap WYSIHTML5 -->
 <script src="<?=base_url('assets/');?>plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
 <!-- Slimscroll -->
@@ -73,6 +77,12 @@
     });
     $('#namaSatker').select2({       
     });
+    //Datemask dd/mm/yyyy
+    $('#datemask').inputmask('dd/mm/yyyy', { 'placeholder': 'dd/mm/yyyy' })
+    //Datemask2 mm/dd/yyyy
+    $('#datemask2').inputmask('mm/dd/yyyy', { 'placeholder': 'mm/dd/yyyy' })
+    //Money Euro
+    $('[data-mask]').inputmask()
 
 
     $('#example1').DataTable({

@@ -24,11 +24,18 @@
               <div class="box-body">
                 <div class="form-group">
                   <label for="nip">NIP</label>
-                  <input type="text" class="form-control" id="nip" name="nip" placeholder="Input no NIP terlapor, hanya angka">
+                  <input type="text" class="form-control" id="nip" name="nip" data-inputmask='"mask": "99999999 999999 9 999"' data-mask>
+                </div>
+                <div class="input-group">
+                  <div class="input-group-addon">
+                    <i class="fa fa-phone"></i>
+                  </div>
+                  <input type="text" class="form-control"
+                         data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask>
                 </div>
                 <div class="form-group">
                   <label for="nama">Nama</label>
-                  <input type="text" class="form-control" id="nama" name="nama" placeholder="Input nama lengkap Terlapor beserta gelarnya">
+                  <input type="text" class="form-control" id="nama" name="nama" placeholder="Input nama lengkap Terlapor beserta gelarnya" >
                 </div>
               
               </div>
@@ -62,9 +69,9 @@
               <div class="form-group">
                 <label>Nama Satker</label>
                 <select class="form-control namaSatker" id="namaSatker" name="namaSatker" style="width:100%">
-                    <option value="0">-PILIH-</option>
+                    <option value="0">-Pilih Wilayah Terlebih Dahulu-</option>
                 </select>
-              </div>
+              </div>  
             </div>
             <div class="box-footer">
                 
