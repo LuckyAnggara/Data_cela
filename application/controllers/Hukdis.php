@@ -13,17 +13,13 @@ class Hukdis extends CI_Controller {
 				'activeStatus' => 'active',
 				]; 
 		$data['dbase'] = $this->db->get_where('user',['id' => $id])->row_array();
-
-		$this->db->select('hukdis.*,wilayah.nama_wilayah');
-		$this->db->from('hukdis');
-		$this->db->join('wilayah','wilayah.id = hukdis.kanwil_id');
-		$dataHukdis['hukdis'] = $this->db->get(null)->result_array();
+		$data['hukdis'] = $this->dataHukdis->get_data_hukdis();
 
 
 		$this->load->view('templates/header',$data);
 		$this->load->view('templates/topbar', $data);
 		$this->load->view('templates/sidebar',$data);
-		$this->load->view('hukdis/daftar', $dataHukdis);
+		$this->load->view('hukdis/daftar', $data);
 		$this->load->view('templates/footer');
 	}
 }

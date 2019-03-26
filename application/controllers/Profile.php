@@ -39,7 +39,7 @@ class Profile extends CI_Controller {
 		$this->db->join('wilayah','wilayah.id = hukdis.kanwil_id');
 		$dataHukdis['hukdis'] = $this->db->get_where(null,['no_ticket' => $no_ticket])->row_array();
 
-		$this->db->select('detail_hukdis.*,user.name');
+		$this->db->select('detail_hukdis.*,user.nama');
 		$this->db->from('detail_hukdis');
 		$this->db->join('user','user.nip = detail_hukdis.nip');
 		$this->db->order_by('id_timeline desc');

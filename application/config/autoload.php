@@ -132,4 +132,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('search/searchPegawai');
+$autoload['model'] = array('search/searchPegawai','data/dataHukdis','data/getWilayah');

@@ -51,6 +51,9 @@
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
 <script src="<?=base_url('assets/');?>plugins/jquery-datatable/extensions/export/buttons.print.min.js"></script>
 
+<!-- Select2 -->
+<script src="<?=base_url('assets/');?>bower_components/select2/dist/js/select2.full.min.js"></script>
+
 
 <!-- SlimScroll -->
 <!-- FastClick -->
@@ -62,8 +65,16 @@
 <!-- AdminLTE for demo purposes -->
 <script src="<?=base_url('assets/');?>dist/js/demo.js"></script>
 <script src="<?=base_url('assets/');?>dropzone.js"></script>
+
 <script>
   $(function () {
+
+    $('#namaWilayah').select2({       
+    });
+    $('#namaSatker').select2({       
+    });
+
+
     $('#example1').DataTable({
     	dom: 'Bfrtip',
         buttons: [
@@ -81,6 +92,31 @@
       'info'        : true,
       'autoWidth'   : false
     })
+  })
+</script>
+
+<script>
+  
+  $(document).ready(function(){
+    $('.namaWilayah').change(function(){
+            var id=$(this).val();
+            $.ajax({
+                url : "<?php echo base_url();?>ticket/getDataSatker",
+                method : "post",
+                data : {id: id},
+                async : false,
+                dataType : 'json',
+                success: function(data){
+                    var html = '';
+                    var i;
+                    for(i=0; i<data.length; i++){
+                        html += '<option id='+data[i].id+'value='+data[i].id+'>'+data[i].nama_satker+'</option>';
+                    }
+                    $('.namaSatker').html(html);
+                     
+                }
+            });
+        });
   })
 </script>
 </body>

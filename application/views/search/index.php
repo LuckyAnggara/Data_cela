@@ -9,10 +9,11 @@
         </div>
         <div class="box-body">
             <h5>Input NIP yang akan di cari</h5>
-            <form action="<?= base_url('search/index');?>" method="post" >
+            <?php echo validation_errors(); ?>
+            <?php echo form_open('search/'); ?>
             <div class="input-group input-group-lg">
               <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                <input type="text" id="nip" name="nip" class="form-control" placeholder="Input NIP, hanya angka">
+                <input type="text" id="nip" name="nip" value="<?= set_value('nip');?>" class="form-control" placeholder="Input NIP, hanya angka">
               <span class="input-group-btn">
                 <button type="submit" class="btn btn-info btn-flat">Search!</button>
               </span>
@@ -24,7 +25,7 @@
 
       <div>
           
-<?= $this->session->flashdata('message');?>
+    <?= $this->session->flashdata('message');?>
             
         </div>
     </section>
